@@ -3,7 +3,6 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
   TouchableOpacity,
   View,
 } from 'react-native';
@@ -29,7 +28,7 @@ const CartScreen = ({navigation, route}) => {
   const tabBarHeight = useBottomTabBarHeight();
 
   const buttonHandler = () => {
-    navigation.push('Payment');
+    navigation.push('Payment', {amount: cartPrice});
   };
 
   const incrementCartItemQuantityHandler = (id: string, size: string) => {
